@@ -1,0 +1,40 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+
+.clickable{
+  position: relative;
+  top: 0;
+  box-shadow: 0 5px 0 #c4c4c4;
+  text-shadow: 1px 1px 1px #fff;
+  transition: All 250ms ease;
+}
+.clickable:active{
+  @extend .clickable;
+  top: 3px;
+  box-shadow: none !important;
+}
+.active-key{
+  @extend .clickable;
+  top: 3px;
+  box-shadow: none !important;
+}
+.white-key{
+  @apply w-16 rounded-b-xl border border-gray-500 h-96 bg-gray-200 flex justify-center items-end p-2;
+  @extend .clickable;
+}
+.black-key{
+  @apply w-16 rounded-b-xl border border-gray-500 h-40 bg-black flex  justify-center items-end p-2 z-10 -mx-8;
+  @extend .clickable;
+  color: white;
+}
+
+
+.spacer {
+  border-right: 3px solid black !important;
+}
+.main-bg{
+  background:linear-gradient(to bottom right,rgba(0,0,0,0.3),rgba(0,0,0,0));
+  box-shadow:0 0 50px rgba(0,0,0,0.5) inset,0 1px rgba(212,152,125,0.2) inset,0 5px 15px rgba(0,0,0,0.5)
+}
